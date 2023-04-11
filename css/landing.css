@@ -10,7 +10,7 @@ body {
 
 .wrapper {
     position: relative;
-    height: 200vh;
+    height: 100vh;
 }
 
 header {
@@ -60,13 +60,12 @@ header ul li a.btn:hover {
 
 
 /* Submenu Starts */
-
 .submenu {
     max-width: 200px;
     position: absolute;
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: -2px 2px 5px lightgray;
+    box-shadow: -2px 2px 3px lightgray;
     padding-left: 0;
     margin-top: 15px;
     opacity: 0;
@@ -99,11 +98,10 @@ ul li:hover .submenu {
 .submenu li:last-child a {
     border-radius: 0 0 10px 10px;
 }
-
 /* Submenu Ends */
 
 
-/* Slider Starts*/
+/* Slider Starts */
 #home {
     height: 650px;
     background-color: #ebebeb;
@@ -137,12 +135,12 @@ ul li:hover .submenu {
 .slider.active {
     width: 50%;
     border-radius: 20px;
-    animation: moveDown 1.5s ease-in-out infinite alternate-reverse;
+    animation: moveDown 1.2s ease-in-out infinite alternate-reverse;
 }
 
 @keyframes moveDown {
     from {
-        transform: translateY(-15px);
+        transform: translateY(-10px);
     }
     to {
         transform: translateY(0);
@@ -169,4 +167,27 @@ ul li:hover .submenu {
 }
 .pic-7 {
     background-image: url('../images/black-panther.webp');
+}
+/* Slider Ends */
+
+
+.gallery {
+    display: flex;
+    height: 20rem;
+    gap: 1rem;
+    background-color: #333;
+    padding: .8rem;
+}
+
+.gallery > div {
+    flex: 1;
+    border-radius: .5rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    transition: all .8s cubic-bezier(0.25, 0.4, 0.45, 1.4);
+}
+
+.gallery > div:hover {
+    flex: 3;
 }
