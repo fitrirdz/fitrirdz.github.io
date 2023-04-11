@@ -18,5 +18,5 @@ function addActiveClass($event) {
 }
 
 IMAGES.forEach((image) => {
-  image.addEventListener("mouseover", addActiveClass);
+  image.addEventListener("click", addActiveClass);
 });
