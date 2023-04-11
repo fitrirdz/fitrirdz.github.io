@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.wrapper {
+    position: relative;
+    height: 200vh;
+}
+
+header {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+header ul li {
+    margin: 0 .4rem;
+}
+
+header ul li a {
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-size: 20px;
+    padding: 15px 20px;
+    border-radius: 20px;
+    transition: all ease .3s;
+    color: black;
+}
+
+header ul li a:hover {
+    color: #fff;
+    background-color: red;
+}
+
+header ul li a.btn {
+    color: #fff;
+    background-color: red;
+    padding: 15px 40px;
+}
+
+header ul li a.btn:hover {
+    color: red;
+    background-color: black;
+}
+
+
+/* Submenu Starts */
+
+.submenu {
+    max-width: 200px;
+    position: absolute;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: -2px 2px 5px lightgray;
+    padding-left: 0;
+    margin-top: 15px;
+    opacity: 0;
+    transition: all ease .5s;
+    z-index: 1;
+    display: block;
+}
+
+ul li:hover .submenu {
+    opacity: 1;
+    margin: 20px 0;
+}
+
+.submenu li {
+    margin: 0;
+}
+
+.submenu li a {
+    display: block;
+    width: 100%;
+    font-size: 15px;
+    text-align: center;
+    border-radius: 0;
+}
+
+.submenu li:first-child a {
+    border-radius: 10px 10px 0 0;
+}
+
+.submenu li:last-child a {
+    border-radius: 0 0 10px 10px;
+}
+
+/* Submenu Ends */
+
+
+/* Slider Starts*/
+#home {
+    height: 650px;
+    background-color: #ebebeb;
+}
+
+.slide-wrapper {
+    width: 90%;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    margin: 0 auto;
+    position: relative;
+    top: 50px;
+}
+
+.slider {
+    margin-right: 10px;
+    height: 100%;
+    width: 10%;
+    border-radius: 20px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all ease-in-out .4s; 
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.slider.active {
+    width: 50%;
+    border-radius: 20px;
+    animation: moveDown 1.5s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes moveDown {
+    from {
+        transform: translateY(-15px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.pic-1 {
+    background-image: url('../images/capt-america.webp');
+}
+.pic-2 {
+    background-image: url('../images/hulk.webp');
+}
+.pic-3 {
+    background-image: url('../images/ironman.webp');
+}
+.pic-4 {
+    background-image: url('../images/scarlet-witch.webp');
+}
+.pic-5 {
+    background-image: url('../images/spiderman.webp');
+}
+.pic-6 {
+    background-image: url('../images/thor.webp');
+}
+.pic-7 {
+    background-image: url('../images/black-panther.webp');
+}
