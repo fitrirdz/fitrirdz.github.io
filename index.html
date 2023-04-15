@@ -5,55 +5,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/landing.css">
-    <title>Landing Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/parallax.css">
+    <title>Parallax</title>
 </head>
 
 <body>
-    <div class="wrapper">
-        <header>
-            <a href="#"><img width="320px" height="80px" src="images/logo.png" alt="logo"></a>
-            <nav>
-                <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Courses</a>
-                        <ul class="submenu">
-                            <li><a href="">HTML</a></li>
-                            <li><a href="">CSS</a></li>
-                            <li><a href="">Javascript</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="">Services</a></li>
-                    <li><a href="">About Us</a></li>
-                    <li><a href="">Contact Us</a></li>
-                    <li><a href="" class="btn">Sign Up</a></li>
-                </ul>
-            </nav>
-        </header>
-
-        <section id="home">
-            <div class="slide-wrapper">
-                <div class="slider pic-1"></div>
-                <div class="slider pic-2"></div>
-                <div class="slider pic-3"></div>
-                <div class="slider pic-4"></div>
-                <div class="slider pic-5"></div>
-                <div class="slider pic-6"></div>
-                <div class="slider pic-7"></div>
-            </div>
-        </section>
-        <div class="gallery">
-            <div style="background-image: url('images/avengers.jpeg');"></div>
-            <div style="background-image: url('images/civil-war.jpeg');"></div>
-            <div style="background-image: url('images/black-panther.jpg');"></div>
-            <div style="background-image: url('images/infinity-war.jpeg');"></div>
-            <div style="background-image: url('images/black-widow.jpeg');"></div>
-            <div style="background-image: url('images/dr-strange.webp');"></div>
-            <div style="background-image: url('images/love-and-thunder.avif');"></div>
-        </div>
+    <div id="card" class="card" onmousemove="onMouseMove(event)" onmouseleave="onMouseLeave(event)">
+        <h1>Parallax</h1>
+        <button>Get Started</button>
     </div>
 
-    <script src="js/script.js"></script>
+    <script src="js/parallax.js"></script>
 </body>
 
 </html>
