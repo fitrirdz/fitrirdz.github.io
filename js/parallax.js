@@ -1,5 +1,5 @@
 const cardWidth = 500,
-  degIncrement = 7,
+  degIncrement = 6,
   card = document.getElementById("card");
 
 const getRotateDeg = (input) => {
@@ -28,4 +28,14 @@ const onMouseMove = (event) => {
 
 const onMouseLeave = () => {
   card.style.transform = `none`;
+};
+
+const getRandomId = () => {
+  fetch("../json/messages.json")
+    .then((response) => response.json())
+    .then((json) => {
+      const id = Math.floor(Math.random() * json.length);
+      document.getElementById("idRandom").innerHTML = json[id].message;
+      document.getElementById("note").innerHTML = json[id].note;
+    });
 };
