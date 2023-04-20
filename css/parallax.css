@@ -13,7 +13,7 @@ body {
   perspective: 1000px;
   margin: 0;
   padding: 0;
-  font-family: "Dancing Script";
+  /* font-family: "Dancing Script"; */
   background: 	#9c70fe;
   color: #f9f9f9;
 }
@@ -32,10 +32,10 @@ body {
     background-repeat: no-repeat;
     transition: 0.5s;
     opacity: 0.7;
+    color: black;
 }
 
 .card p {
-    color: black;
     font-weight: bold;
 }
 

@@ -16,7 +16,12 @@
 
 <body>
     <div id="card" class="card" onmousemove="onMouseMove(event)" onmouseleave="onMouseLeave(event)">
-        <button onclick="getRandomId()">Click Me</button>
+
+        <label for="name">What should I call you?</label>
+        <input id="name" type="text" placeholder="Your Name">
+        <button type="button" onclick="getRandomId()">Click Me</button>
+
+        <p id="nama"></p>
         <p id="idRandom"></p>
         <p id="note"></p>
     </div>
