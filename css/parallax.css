@@ -21,7 +21,7 @@ body {
 .card {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     /* align-items: center; */
     padding: 20px;
     width: 750px;
@@ -45,10 +45,15 @@ body {
     font-family:'Courier New', Courier, monospace
 }
 
+.card div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
-.card p#nama, 
-.card p#message, 
-.card p#note  {
+p#nama, 
+p#message, 
+p#note  {
     font-weight: bold;
     font-family: "Charm", sans-serif;
 }
