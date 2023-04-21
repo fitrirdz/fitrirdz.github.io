@@ -14,7 +14,7 @@ body {
   margin: 0;
   padding: 0;
   /* font-family: "Dancing Script"; */
-  background: 	#9c70fe;
+  background: linear-gradient(0deg, rgb(135, 121, 156), rgb(88, 59, 116), rgb(51, 34, 68), rgb(20, 5, 34));
   color: #f9f9f9;
 }
 
@@ -25,14 +25,23 @@ body {
     align-items: center;
     width: 750px;
     height: 480px;
-    border-radius: 16px;
-    background: url('../images/mosque.png');
+    /* border-radius: 16px; */
+    /* background: url('../images/mosque.png');
     background-size: cover;
     background-position: inherit;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
     transition: 0.5s;
-    opacity: 0.7;
+    /* opacity: 0.7; */
     color: black;
+    border: 1em solid transparent;
+    background: linear-gradient(white, white)
+                padding-box,
+                repeating-linear-gradient(-45deg,
+                #fa81b6 0, #fa81b6 12.5%,
+                transparent 0, transparent 25%,
+                #7eb4e2 0, #7eb4e2 37.5%,
+                transparent 0, transparent 50%)
+                0 / 5em 5em;
 }
 
 .card p {
