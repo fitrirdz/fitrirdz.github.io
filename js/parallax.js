@@ -46,5 +46,5 @@ const getRandomId = () => {
 const openMessage = () => {
   const name = document.getElementById("name");
   sessionStorage.setItem("nama", name?.value);
-  window.location.href = "/index.html";
+  window.location.href = "/message.html";
 };
