@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Charm&display=swap" rel="stylesheet">
 
     <title>Parallax</title>
     <link rel="stylesheet" href="/css/parallax.css">
@@ -15,19 +15,20 @@
 </head>
 
 <body>
+
     <div id="card" class="card" onmousemove="onMouseMove(event)" onmouseleave="onMouseLeave(event)">
-
-        <label for="name">What should I call you?</label>
-        <input id="name" type="text" placeholder="Your Name">
-        <button type="button" onclick="getRandomId()">Click Me</button>
-
+        <p id="destination"></p>
         <p id="nama"></p>
-        <p id="idRandom"></p>
+        <p id="message"></p>
         <p id="note"></p>
+        <p>From: Fitri Ratna Dewi</p>
     </div>
 
 
     <script src="js/parallax.js"></script>
+    <script>
+        getRandomId();
+    </script>
 </body>
 
 </html>

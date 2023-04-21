@@ -34,10 +34,17 @@ const getRandomId = () => {
   fetch("../json/messages.json")
     .then((response) => response.json())
     .then((json) => {
-      const id = Math.floor(Math.random() * json.length);
-      const name = document.getElementById("name");
-      document.getElementById("nama").innerHTML = `Hi ${name.value},`;
-      document.getElementById("idRandom").innerHTML = json[id].message;
+      const id = Math.floor(Math.random() * json?.length);
+      const name = sessionStorage.getItem("nama");
+      document.getElementById("destination").innerHTML = `To: ${name}`;
+      document.getElementById("nama").innerHTML = `Hi ${name},`;
+      document.getElementById("message").innerHTML = json[id].message;
       document.getElementById("note").innerHTML = json[id].note;
     });
+};
+
+const openMessage = () => {
+  const name = document.getElementById("name");
+  sessionStorage.setItem("nama", name?.value);
+  window.location.href = "/index.html";
 };

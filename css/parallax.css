@@ -22,16 +22,11 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
+    padding: 20px;
     width: 750px;
     height: 480px;
-    /* border-radius: 16px; */
-    /* background: url('../images/mosque.png');
-    background-size: cover;
-    background-position: inherit;
-    background-repeat: no-repeat; */
     transition: 0.5s;
-    /* opacity: 0.7; */
     color: black;
     border: 1em solid transparent;
     background: linear-gradient(white, white)
@@ -46,6 +41,16 @@ body {
 
 .card p {
     font-weight: bold;
+    text-align: justify;
+    font-family:'Courier New', Courier, monospace
+}
+
+
+.card p#nama, 
+.card p#message, 
+.card p#note  {
+    font-weight: bold;
+    font-family: "Charm", sans-serif;
 }
 
 button, a {
@@ -60,8 +65,9 @@ button:active {
     .card {
         margin: auto;
         width: 80%;
-        height: 320px;
-        
+        /* height: 320px; */
+        padding: 15px;
+        overflow: auto;
     }
 }
 
@@ -71,17 +77,4 @@ button:active {
         width: 50%;
         height: 80%;
     }
-}
-
-.envelope {
-    padding: 1em;
-    border: 1em solid transparent;
-    background: linear-gradient(white, white)
-                padding-box,
-                repeating-linear-gradient(-45deg,
-                #f69ec4 0, #f69ec4 12.5%,
-                transparent 0, transparent 25%,
-                #7eb4e2 0, #7eb4e2 37.5%,
-                transparent 0, transparent 50%)
-                0 / 5em 5em;
 }
