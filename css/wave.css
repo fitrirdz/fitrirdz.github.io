@@ -73,6 +73,27 @@ section .waves .wave#wave4 {
   mix-blend-mode: screen;
 }
 
+h2 {
+  position: absolute;
+  bottom: 60vh;
+  transform: translateY(50%);
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-size: 10em;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.island {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 800px;
+  bottom: 0;
+  pointer-events: none;
+}
+
 @keyframes animate {
   0% {
     background-position-x: 1000px;
