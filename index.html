@@ -3,51 +3,64 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap" rel="stylesheet">
-    <title>Eid Mubarak</title>
-    <link rel="stylesheet" href="css/login.css">
+    <title>Welcome to 2024</title>
+    <link rel="stylesheet" href="css/fireworks.css" />
 </head>
 
 <body>
+    <!-- <div class="firework"></div>
+    <div class="firework"></div>
+    <div class="firework"></div> -->
     <section>
         <div class="container">
             <div id="scene">
                 <div class="layer">
+                    <h2 id="timer"></h2>
                     <div id='stars'></div>
+                    <img src="../images/island.png" alt="">
                 </div>
-                <div class="layer" data-depth-x="-0.15" data-depth-y="0.25">
-                    <div class="moon"></div>
-                </div>
-                <div class="layer" data-depth-x="0.15"><img src="images/mountain.png" alt="">
 
-                </div>
-            </div>
-        </div>
-        <div class="login">
-            <h2>Eid Mubarak</h2>
-            <p>May your Eid will be full of love, laughter, and light</p>
-            <div class="input-box">
-                <input type="text" placeholder="Your name" id="name">
-            </div>
-            <div class="input-box">
-                <input type="submit" id="btn" value="Open Special Message" onclick="openMessage()">
             </div>
         </div>
     </section>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"
-        integrity="sha512-/6TZODGjYL7M8qb7P6SflJB/nTGE79ed1RfJk3dfm/Ib6JwCT4+tOfrrseEHhxkIhwG8jCl+io6eaiWLS/UX1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <div class="waves">
+        <div class="wave" id="wave1"></div>
+        <div class="wave" id="wave2"></div>
+        <div class="wave" id="wave3"></div>
+        <div class="wave" id="wave4"></div>
+    </div>
 
     <script>
-        let scene = document.getElementById("scene");
-        let parallax = new Parallax(scene)
+        // Set the date we're counting down to
+        var countDownDate = new Date("Jan 1, 2024 00:00:00").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function () {
+
+            // Get today's date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Output the result in an element with id="demo"
+            document.getElementById("timer").innerHTML = days + "d " + hours + "h "
+                + minutes + "m " + seconds + "s ";
+
+            // If the count down is over, write some text 
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("timer").innerHTML = "EXPIRED";
+            }
+        }, 1000);
     </script>
-    <script src="js/parallax.js"></script>
 </body>
 
 </html>
