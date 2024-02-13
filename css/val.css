@@ -12,6 +12,7 @@ body {
 
 body {
   background: radial-gradient(#e7cdce, #e1848c, #d05d65);
+  background-color: #d05d65;
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
