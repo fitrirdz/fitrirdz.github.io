@@ -3,11 +3,19 @@
   src: url('/assets/fonts/Lathi.ttf') format('truetype');
 }
 
+html,
 body {
-  padding: 0;
+  height: 100%;
   margin: 0;
-  height: 100vh;
+  padding: 0;
+}
+
+body {
   background: radial-gradient(#e7cdce, #e1848c, #d05d65);
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #canvas {
@@ -21,14 +29,9 @@ body {
 .container {
   height: 100vh;
   width: 100vw;
-  max-height: 800px;
-  max-width: 1280px;
-  min-height: 600px;
-  min-width: 1000px;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  margin: 0 auto;
 }
 
 .border {
