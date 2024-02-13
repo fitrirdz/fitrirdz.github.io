@@ -3,8 +3,8 @@ let canvas,
   w,
   h,
   bubbles = [],
-  bubbleCount = 1000,
-  bubbleChance = 0.7;
+  bubbleCount = 100,
+  bubbleChance = 0.2;
 
 let mouse = {
   x: undefined,
