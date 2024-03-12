@@ -4,22 +4,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wishing you a wonderful day</title>
-    <link rel="stylesheet" href="/css/val.css">
-    <link rel="icon" type="image/x-icon" href="assets/love.ico">
-    <script src="/js/bubble.js"></script>
+    <title>Ramadhan Mubarok 1445</title>
+    <link rel="stylesheet" href="css/slides.css">
 </head>
 
 <body>
-    <canvas id="canvas"></canvas>
     <div class="container">
-        <div class="card card0">
-            <div class="border">
-                <h2>With you, every day feels like Valentine's Day, as your love envelops me in warmth and joy.</h2>
+        <div class="slider">
+            <div class="slides" style="--img: url('/images/img1.jpg')">
+                <div class="content">
+                    <h2>Slide 01</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quae repellendus consequatur quis
+                        ullam aperiam!</p>
+                </div>
+            </div>
+            <div class="slides" style="--img: url('/images/img2.jpg')">
+                <div class="content">
+                    <h2>Slide 02</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quae repellendus consequatur quis
+                        ullam aperiam!</p>
+                </div>
+            </div>
+            <div class="slides" style="--img: url('/images/img3.jpg')">
+                <div class="content">
+                    <h2>Slide 03</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quae repellendus consequatur quis
+                        ullam aperiam!</p>
+                </div>
+            </div>
+            <div class="slides" style="--img: url('/images/img4.avif')">
+                <div class="content">
+                    <h2>Slide 04</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quae repellendus consequatur quis
+                        ullam aperiam!</p>
+                </div>
+            </div>
+            <div class="slides" style="--img: url('/images/img5.avif')">
+                <div class="content">
+                    <h2>Slide 05</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quae repellendus consequatur quis
+                        ullam aperiam!</p>
+                </div>
+            </div>
+            <div class="slides" style="--img: url('/images/img6.jpeg')">
+                <div class="content">
+                    <h2>Slide 06</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quae repellendus consequatur quis
+                        ullam aperiam!</p>
+                </div>
             </div>
         </div>
-
+        <div class="buttons">
+            <span class="prev"></span>
+            <span class="next"></span>
+        </div>
     </div>
+    <script>
+        let next = document.querySelector(".next");
+        let prev = document.querySelector(".prev");
+        let slider = document.querySelector(".slider");
+
+        next.addEventListener('click', function () {
+            let slides = document.querySelectorAll(".slides");
+            slider.appendChild(slides[0])
+        })
+        prev.addEventListener('click', function () {
+            let slides = document.querySelectorAll(".slides");
+            slider.prepend(slides[slides.length - 1])
+        })
+    </script>
 </body>
 
 </html>
