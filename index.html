@@ -44,6 +44,11 @@
         fetch('https://du2jjrjp.api.sanity.io/v2022-03-07/data/query/production?query=*%5B_type+%3D%3D+%27post%27%5D%7B%0A++title%2C+body%2C+%0A++%22mainImage%22%3A+mainImage.asset-%3Eurl%2C%0A%7D&perspective=published')
             .then(response => response.json())
             .then(data => {
+                // const firstDay = new Date("2024-03-12");
+                // const today = new Date();
+                // const currentDay = Math.ceil((today - firstDay) / 86400000);
+                // const yesterday = currentDay - 1;
+
                 // Manipulate DOM to display content
                 (data?.result ?? [])?.sort((a, b) => a?.title?.localeCompare(b?.title))?.forEach((item, index) => {
                     const contentContainer = document.getElementById('slider');
