@@ -17,7 +17,7 @@
   --white-color: hsl(0, 0%, 100%);
   --body-color: hsl(0, 0%, 100%);
   --container-color: hsl(0, 0%, 100%);
-  --shadow-color: hsl(var(--hue), 90%, 30%, 0.1);
+  --shadow-color: hsla(var(--hue), 90%, 30%, 0.1);
 
   /* Font and typography */
   --body-font: 'Syne', sans-serif;
@@ -108,8 +108,48 @@ img {
 }
 
 /* Theme */
+.nav__actions {
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+}
+
+.change-theme {
+  color: var(--white-color);
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: color 0.4s;
+}
 
 /* Variables Dark Theme */
+body.dark-theme {
+  --title-color: hsl(var(--hue), 24%, 85%);
+  --text-color: hsl(var(--hue), 8%, 70%);
+  --body-color: hsl(var(--hue), 16%, 8%);
+  --container-color: hsl(var(--hue), 16%, 12%);
+  --shadow-color: hsla(var(--hue), 32%, 4%, 0.4);
+}
+
+/* Color changes in some parts of the website, in dark theme */
+.dark-theme .bg-header {
+  box-shadow: 0 12px 24px var(--shadow-color);
+}
+
+.dark-theme .services__modal {
+  background-color: hsla(var(--hue), 90%, 8%, 0.2);
+}
+
+.dark-theme::-webkit-scrollbar {
+  background-color: hsl(var(--hue), 16%, 15%);
+}
+
+.dark-theme::-webkit-scrollbar-thumb {
+  background-color: hsl(var(--hue), 16%, 25%);
+}
+
+.dark-theme::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(var(--hue), 16%, 35%);
+}
 
 /* Reusable CSS Classes */
 .container {
@@ -256,7 +296,7 @@ img {
   box-shadow: 0 2px 16px var(--shadow-color);
 }
 
-.bg-header :is(.nav__logo, .nav__toggle) {
+.bg-header :is(.nav__logo, .nav__toggle, .change-theme) {
   color: var(--title-color);
 }
 
@@ -265,7 +305,7 @@ img {
   background-color: var(--body-color);
 }
 
-.header-pages :is(.nav__logo, .nav__toggle) {
+.header-pages :is(.nav__logo, .nav__toggle, .change-theme) {
   color: var(--title-color);
 }
 
