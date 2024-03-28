@@ -75,7 +75,7 @@ button {
 body {
   background-color: var(--body-color);
   color: var(--text-color);
-  transition: background-color 4s;
+  transition: background-color 0.4s;
 }
 
 input,
@@ -736,5 +736,39 @@ img {
   font-weight: var(--font-medium);
 }
 /* SCROLL BAR */
+::-webkit-scrollbar {
+  width: 0.6rem;
+  background-color: hsl(var(--hue), 20%, 85%);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: hsl(var(--hue), 20%, 65%);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(var(--hue), 20%, 55%);
+}
+
 /* SCROLL UP */
+.scrollup {
+  position: fixed;
+  right: 1rem;
+  bottom: -50%;
+  background-color: var(--container-color);
+  box-shadow: 0 12px 24px var(--shadow-color);
+  display: inline-flex;
+  padding: 6px;
+  font-size: 1.25rem;
+  color: var(--title-color);
+  z-index: var(--z-tooltip);
+  transition: bottom 0.4s, transform 0.4s, background-color 0.4s;
+}
+
+.scrollup:hover {
+  transform: translateY(-0.5rem);
+}
+
 /* Show Scroll Up */
+.show-scroll {
+  bottom: 3rem;
+}
