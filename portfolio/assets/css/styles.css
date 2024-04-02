@@ -7,8 +7,8 @@
 
   /* Colors */
 
-  --hue: 255;
-  --first-color: hsl(var(--hue), 90%, 60%);
+  --hue: 200;
+  --first-color: hsl(var(--hue), 90%, 50%);
   --first-color-alt: hsl(var(--hue), 82%, 56%);
   --first-color-light: hsl(var(--hue), 40%, 80%);
   --title-color: hsl(var(--hue), 24%, 16%);
@@ -43,7 +43,7 @@
 /* Responsive typography */
 @media screen and (min-width: 1150px) {
   :root {
-    --biggest-font-size: 4.5rem;
+    --biggest-font-size: 3rem;
     --h1-font-size: 2.25rem;
     --h2-font-size: 1.5rem;
     --h3-font-size: 1.25rem;
