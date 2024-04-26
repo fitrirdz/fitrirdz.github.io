@@ -69,7 +69,9 @@
 
                 <div class="home__content grid">
                     <div class="home__data grid">
-                        <h1 class="home__name">Fitri R Dewi</h1>
+                        <span class="topline">Hello</span>
+                        <h1 id="name">I'm <span class="multiText"></span></h1>
+
                         <h2 class="home__profession">Frontend Developer</h2>
 
                         <div class="home__social">
@@ -87,7 +89,7 @@
                             </a>
                         </div>
                     </div>
-                    <a href="../images/avengers.jpeg" download="Ini CV" class="home__button button">Download CV</a>
+                    <!-- <a href="../images/avengers.jpeg" download="Ini CV" class="home__button button">Download CV</a> -->
                 </div>
             </div>
         </section>
@@ -362,6 +364,17 @@
 
     <!-- INDEX JS -->
     <script src="assets/js/index.js"></script>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        let typingEffect = new Typed(".multiText", {
+            strings: ["Fitri"],
+            loop: true,
+            typeSpeed: 100,
+            backSpeed: 80,
+            backDelay: 1500,
+        })
+    </script>
 </body>
 
 </html>

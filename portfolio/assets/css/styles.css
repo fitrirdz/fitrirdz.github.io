@@ -85,6 +85,34 @@ textarea {
   outline: none;
 }
 
+.topline {
+  display: block;
+  position: relative;
+  font-size: var(--h3-font-size);
+  letter-spacing: 5px;
+}
+
+.topline::after {
+  position: absolute;
+  content: '';
+  height: 0.125rem;
+  width: 2rem;
+  bottom: 0.25rem;
+  background-color: var(--first-color);
+}
+
+h1#name {
+  display: block;
+  font-size: 3rem;
+  color: var(--first-color-light);
+}
+
+.multiText {
+  color: var(--first-color);
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
 h1,
 h2,
 h3,
