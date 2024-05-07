@@ -4,72 +4,351 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ramadhan 1445 H Journey</title>
-    <link rel="stylesheet" href="css/slides.css">
-    <link rel="icon" type="image/x-icon" href="assets/cookie.ico">
+    <!-- REMIXICON -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
+
+    <!-- SWIPER CSS -->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="shortcut icon" href="assets/profile.ico" type="image/x-icon">
+    <title>FitriRdz - Home Page</title>
 </head>
 
 <body>
-    <div id="particles-js">
-        <div class="container">
-            <div id="slider" class="slider">
+    <!-- HEADER -->
+    <header class="header" id="header">
+        <nav class="nav container"><a href="index.html" class="nav__logo">FitriRdz</a>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="index.html" class="nav__link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="about.html" class="nav__link">About Me</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="work.html" class="nav__link">Portfolio</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="contact.html" class="button">Contact Me</a>
+                    </li>
+                </ul>
+
+                <!-- Close button -->
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
             </div>
-            <div class="buttons">
-                <span class="prev"></span>
-                <span class="next"></span>
+
+            <div class="nav__actions">
+                <!-- Theme button -->
+                <i class="ri-moon-line change-theme" id="theme-button"></i>
+
+                <!-- Toggle button -->
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-apps-2-line"></i>
+                </div>
             </div>
-        </div>
-    </div>
+        </nav>
+    </header>
 
-    <audio autoplay="true" loop="true">
-        <source src="/assets/audio/mideast.mp3" type="audio/mpeg">
-    </audio>
+    <!-- MAIN -->
+    <main class="main">
+        <!-- HOME -->
+        <section class="home section">
+            <div class="home__rectangle"></div>
 
-    <script>
-        let next = document.querySelector(".next");
-        let prev = document.querySelector(".prev");
-        let slider = document.querySelector(".slider");
+            <div class="home__container container grid">
+                <div class="home__perfil perfil">
+                    <div class="perfil__content">
+                        <img src="assets/img/profile-picture.png" alt="image" class="perfil__img">
+                    </div>
+                </div>
 
-        next.addEventListener('click', function () {
-            let slides = document.querySelectorAll(".slides");
-            slider.appendChild(slides[0])
-        })
-        prev.addEventListener('click', function () {
-            let slides = document.querySelectorAll(".slides");
-            slider.prepend(slides[slides.length - 1])
-        })
-    </script>
-    <script>
-        // Fetch content from Sanity
-        fetch('https://du2jjrjp.api.sanity.io/v2022-03-07/data/query/production?query=*%5B_type+%3D%3D+%27post%27%5D%7B%0A++title%2C+body%2C+%0A++%22mainImage%22%3A+mainImage.asset-%3Eurl%2C%0A%7D&perspective=published')
-            .then(response => response.json())
-            .then(data => {
-                // const firstDay = new Date("2024-03-12");
-                // const today = new Date();
-                // const currentDay = Math.ceil((today - firstDay) / 86400000);
-                // const yesterday = currentDay - 1;
+                <div class="home__content grid">
+                    <div class="home__data grid">
+                        <span class="topline">Hello</span>
+                        <h1 id="name">I'm <span class="multiText"></span></h1>
 
-                // Manipulate DOM to display content
-                (data?.result ?? [])?.sort((a, b) => a?.title?.localeCompare(b?.title))?.forEach((item, index) => {
-                    const contentContainer = document.getElementById('slider');
-                    const title = item?.title
-                    const body = item?.body?.[0]?.children?.[0]?.text
-                    const article = document.createElement('div');
-                    article.classList.add("slides");
-                    article.style = `--img: url('${item?.mainImage}')`
-                    article.innerHTML = `
-                        <div class="content">
-                            <h2>${title ?? ' '}</h2>
-                            <p>${body ?? ' '}</p>
+                        <h2 class="home__profession">Frontend Developer</h2>
+
+                        <div class="home__social">
+                            <a href="https://github.com/fitrirdz" target="_blank" rel="noopener noreferrer"
+                                class="home__social-link">
+                                <i class="ri-github-fill"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/fitriratnadewi" target="_blank"
+                                rel="noopener noreferrer" class="home__social-link">
+                                <i class="ri-linkedin-box-fill"></i>
+                            </a>
+                            <a href="https://instagram.com/fitrirdz" target="_blank" rel="noopener noreferrer"
+                                class="home__social-link">
+                                <i class="ri-instagram-fill"></i>
+                            </a>
                         </div>
-                    `
-                    contentContainer.appendChild(article);
-                });
-            })
-            .catch(error => console.error('Error fetching data:', error));
+                    </div>
+                    <!-- <a href="../images/avengers.jpeg" download="Ini CV" class="home__button button">Download CV</a> -->
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES -->
+        <section class="services section">
+            <h2 class="section__title">
+                The Services <br>
+                I Offer
+            </h2>
+
+            <div class="services__container container grid">
+                <article class="services__card">
+                    <i class="ri-code-s-slash-line services__icon"></i>
+                    <h2 class="services__title">Web Developer</h2>
+                    <p class="services__description">
+                        Join me on an exciting ride through my web development projects.
+                        Experience cool designs, awesome features, and the magic of HTML, CSS, JavaScript, and more.
+                        Let's make your online dreams a reality!
+                    </p>
+
+                    <button class="services__button button">See More</button>
+
+                    <div class="services__modal">
+                        <div class="services__modal-content">
+                            <i class="ri-close-line services__modal-close"></i>
+
+                            <h2 class="services__modal-title">Web Developer</h2>
+
+                            <ul class="services__modal-list grid">
+                                <li class="services__modal-item">Develop websites and applications using ReactJS or
+                                    NextJS frameworks</li>
+                                <li class="services__modal-item">Transform visual designs into functional web layouts,
+                                    collaborating with designers</li>
+                                <li class="services__modal-item">Test, debug, ensure compatibility across browsers,
+                                    devices for seamless user experience</li>
+                                <li class="services__modal-item">Maintain, update, optimize sites, add features for
+                                    better performance and user experience</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="services__card">
+                    <i class="ri-pen-nib-line services__icon"></i>
+                    <h2 class="services__title">Mobile Developer</h2>
+                    <p class="services__description">
+                        Take a peek into my mobile development journey, where I strive to create apps that balance
+                        creativity and function. Dive into the user experiences of each project. Your next mobile
+                        solution starts here!
+                    </p>
+
+                    <button class="services__button button">See More</button>
+
+                    <div class="services__modal">
+                        <div class="services__modal-content">
+                            <i class="ri-close-line services__modal-close"></i>
+
+                            <h2 class="services__modal-title">Mobile Developer</h2>
+
+                            <ul class="services__modal-list grid">
+                                <li class="services__modal-item">Utilize React Native or Flutter to build mobile
+                                    applications</li>
+                                <li class="services__modal-item">Collaborate on intuitive UI designs with designers for
+                                    optimal user experience</li>
+                                <li class="services__modal-item">Ensure cross-platform compatibility through rigorous
+                                    testing and debugging processes</li>
+                                <li class="services__modal-item">Enhance app performance, security, and user experience
+                                    through regular updates and optimizations</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- WORK -->
+        <section class="work section">
+            <h2 class="section__title">
+                My Most <br>
+                Recent Works
+            </h2>
+
+            <div class="work__container container grid">
+                <article class="work__card">
+                    <a href="#" target="_blank" class="work__link">
+                        <img src="assets/img/fam-ease-thumbnail.png" alt="image" class="work__img">
+                        <i class="ri-arrow-right-circle-line work__icon"></i>
+                    </a>
+
+                    <h2 class="work__title">Fam Ease</h2>
+                    <span class="work__subtitle">Mobile Application</span>
+                </article>
+
+                <article class="work__card">
+                    <a href="#" target="_blank" class="work__link">
+                        <img src="assets/img/mmsgi-superapp.png" alt="image" class="work__img">
+                        <i class="ri-arrow-right-circle-line work__icon"></i>
+                    </a>
+
+                    <h2 class="work__title">MMSGI App</h2>
+                    <span class="work__subtitle">Mobile Application</span>
+                </article>
+
+                <article class="work__card">
+                    <a href="#" target="_blank" class="work__link">
+                        <img src="assets/img/bni-credit-management.png" alt="image" class="work__img">
+                        <i class="ri-arrow-right-circle-line work__icon"></i>
+                    </a>
+
+                    <h2 class="work__title">Special Rate Credit Management</h2>
+                    <span class="work__subtitle">Web Application</span>
+                </article>
+            </div>
+        </section>
+
+        <!-- TESTIMONIAL -->
+        <!-- <section class="testimonial section">
+            <h2 class="section__title">
+                What They Say <br>
+                About Me?
+            </h2>
+
+            <div class="testimonial__container container">
+                <div class="testimonial__swiper swiper">
+                    <div class="swiper-wrapper">
+                        <article class="testimonial__card swiper-slide">
+                            <div class="testimonial__border">
+                                <img src="assets/img/profile.png" alt="image" class="testimonial__img">
+                            </div>
+
+                            <h2 class="testimonial__name">Jen Will</h2>
+                            <p class="testimonial__description">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti iure suscipit maxime
+                                consectetur dolores aut laborum quaerat deleniti facilis ab.
+                            </p>
+                        </article>
+
+                        <article class="testimonial__card swiper-slide">
+                            <div class="testimonial__border">
+                                <img src="assets/img/profile.png" alt="image" class="testimonial__img">
+                            </div>
+
+                            <h2 class="testimonial__name">Rial Loz</h2>
+                            <p class="testimonial__description">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti iure suscipit maxime
+                                consectetur dolores aut laborum quaerat deleniti facilis ab.
+                            </p>
+                        </article>
+
+                        <article class="testimonial__card swiper-slide">
+                            <div class="testimonial__border">
+                                <img src="assets/img/profile.png" alt="image" class="testimonial__img">
+                            </div>
+
+                            <h2 class="testimonial__name">Mey Doth</h2>
+                            <p class="testimonial__description">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti iure suscipit maxime
+                                consectetur dolores aut laborum quaerat deleniti facilis ab.
+                            </p>
+                        </article>
+
+                        <article class="testimonial__card swiper-slide">
+                            <div class="testimonial__border">
+                                <img src="assets/img/profile.png" alt="image" class="testimonial__img">
+                            </div>
+
+                            <h2 class="testimonial__name">Celi Phet</h2>
+                            <p class="testimonial__description">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti iure suscipit maxime
+                                consectetur dolores aut laborum quaerat deleniti facilis ab.
+                            </p>
+                        </article>
+                    </div>
+                </div>
+                
+                <div class="swiper-pagination"></div>
+            </div>
+        </section> -->
+
+        <!-- CONTACT -->
+        <section class="contact section">
+            <div class="contact__container container grid">
+                <h2 class="section__title">
+                    Let's Talk <br>
+                    About Your Project
+                </h2>
+
+                <a href="contact.html" class="contact__button button">Contact Me</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer__container container grid">
+            <div class="footer__content grid">
+                <a href="index.html" class="footer__logo">FitriRdz</a>
+
+                <ul class="footer__links">
+                    <li>
+                        <a href="about.html" class="footer__link">About Me</a>
+                    </li>
+                    <li>
+                        <a href="work.html" class="footer__link">Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="contact.html" class="footer__link">Contact Me</a>
+                    </li>
+                </ul>
+
+                <div class="footer__social">
+                    <a href="https://instagram.com/fitrirdz" target="_blank" rel="noopener noreferrer"
+                        class="footer__social-link">
+                        <i class="ri-instagram-fill"></i>
+                    </a>
+
+                    <a href="https://github.com/fitrirdz" target="_blank" rel="noopener noreferrer"
+                        class="footer__social-link">
+                        <i class="ri-github-fill"></i>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/fitriratnadewi" target="_blank" rel="noopener noreferrer"
+                        class="footer__social-link">
+                        <i class="ri-linkedin-box-fill"></i>
+                    </a>
+                </div>
+            </div>
+
+            <span class="footer__copy">
+                &#169; All Rights Reserved by Fitri Ratna Dewi
+            </span>
+        </div>
+    </footer>
+
+    <!-- SCROLL UP -->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="ri-arrow-up-line"></i>
+    </a>
+
+    <!-- MAIN JS -->
+    <script src="assets/js/main.js"></script>
+
+    <!-- SWIPER JS -->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+
+    <!-- INDEX JS -->
+    <script src="assets/js/index.js"></script>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        let typingEffect = new Typed(".multiText", {
+            strings: ["Fitri"],
+            loop: true,
+            typeSpeed: 100,
+            backSpeed: 80,
+            backDelay: 2000,
+        })
     </script>
-    <script type="text/javascript" src="/js/particles.js"></script>
-    <script type="text/javascript" src="/js/app.js"></script>
 </body>
 
 </html>
