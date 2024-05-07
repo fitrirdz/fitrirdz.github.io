@@ -179,6 +179,10 @@ body.dark-theme {
   background-color: hsl(var(--hue), 16%, 35%);
 }
 
+.dark-theme .dark-image {
+  filter: invert(100%);
+}
+
 /* Reusable CSS Classes */
 .container {
   max-width: 1120px;
@@ -1146,4 +1150,40 @@ body.dark-theme {
   .home__rectangle {
     width: 23vw;
   } */
+}
+
+/* TOOLTIP */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: var(--text-color);
+  color: var(--body-color);
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 150%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.tooltip .tooltiptext::before {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent var(--text-color) transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
 }
