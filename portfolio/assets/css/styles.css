@@ -7,8 +7,8 @@
 
   /* Colors */
 
-  --hue: 200;
-  --first-color: hsl(var(--hue), 90%, 50%);
+  --hue: 30;
+  --first-color: hsl(var(--hue), 88%, 50%);
   --first-color-alt: hsl(var(--hue), 82%, 56%);
   --first-color-light: hsl(var(--hue), 40%, 80%);
   --title-color: hsl(var(--hue), 24%, 16%);
@@ -934,9 +934,9 @@ body.dark-theme {
     margin-inline: auto;
   }
 
-  .section {
-    padding-block: 7rem 2rem;
-  }
+  /* .section {
+    padding-block: 5rem 2rem;
+  } */
 
   .section__title {
     margin-bottom: 3.5rem;
@@ -1055,7 +1055,7 @@ body.dark-theme {
 
   .contact__container {
     grid-template-columns: repeat(2, max-content);
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     column-gap: 25rem;
     padding-block: 1rem 5rem;
