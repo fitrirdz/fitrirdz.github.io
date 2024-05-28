@@ -29,7 +29,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-image: url(../img/noise.png),
-    radial-gradient(circle, rgb(52 33 56) 0%, rgb(0 0 0) 100%);
+    radial-gradient(circle, rgb(29, 93, 178) 0%, rgb(0 0 0) 100%);
   background-size: 400px, 100% 100vh;
   background-attachment: fixed;
   overflow-x: hidden;
