@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,600,900&display=swap');
 
+:root {
+  --hue: 200;
+  --primary-color: hsla(var(--hue), 100%, 50%, 1);
+  --secondary-color: hsla(var(--hue), 100%, 50%, 0.3);
+  --title-color: hsla(var(--hue), 22%, 31%, 1);
+  --highlight-text-color: hsla(var(--hue), 100%, 30%, 1);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -38,7 +46,7 @@ nav {
 
 b {
   font-size: 70px;
-  color: #7f00ff;
+  color: var(--primary-color);
 }
 
 .navItems {
@@ -60,7 +68,7 @@ b {
 
 .navItems li:hover a,
 .links a:hover {
-  color: #7f00ff;
+  color: var(--primary-color);
 }
 
 .links a {
@@ -85,10 +93,14 @@ b {
   height: 600px;
   width: 600px;
   border-radius: 50%;
-  background-color: #7f00ff;
+  background-color: var(--primary-color);
   left: -12%;
   top: 40%;
-  background: linear-gradient(45deg, #7f00ff, pink);
+  background: linear-gradient(
+    45deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
   animation: object1 6s linear infinite;
 }
 
@@ -98,10 +110,14 @@ b {
   height: 200px;
   width: 200px;
   border-radius: 50%;
-  background-color: #7f00ff;
+  background-color: var(--primary-color);
   left: 35%;
   top: 12%;
-  background: linear-gradient(45deg, #7f00ff, pink);
+  background: linear-gradient(
+    45deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
   animation: object2 6s linear infinite;
 }
 
@@ -142,18 +158,18 @@ b {
   height: 4px;
   width: 45px;
   bottom: 10px;
-  background-color: #7f00ff;
+  background-color: var(--primary-color);
 }
 
 h1 {
   display: block;
-  font-size: 7em;
+  font-size: 5em;
   font-weight: 900;
   color: #3d535f;
 }
 
 .multiText {
-  color: #7f00ff;
+  color: var(--highlight-text-color);
   text-transform: capitalize;
 }
 
@@ -186,7 +202,7 @@ button {
 }
 
 button:hover {
-  background-color: #7f00ff;
+  background-color: var(--primary-color);
 }
 
 .imgbox {

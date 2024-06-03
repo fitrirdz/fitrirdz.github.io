@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive</title>
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav>
+            <div class="logo">
+                <h4>Site Logo</h4>
+            </div>
+
+            <ul class="">
+                <li class="">
+                    <a href="" class="link">Menu 1</a>
+                </li>
+                <li class="">
+                    <a href="" class="link">Menu 2</a>
+                </li>
+                <li class="">
+                    <a href="" class="link">Menu 3</a>
+                </li>
+                <li class="">
+                    <a href="" class="link">Menu 4</a>
+                </li>
+            </ul>
+
+            <div class="menu-toggle">
+                <input type="checkbox" />
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <script>
+        const menuToggle = document.querySelector(".menu-toggle input");
+        const nav = document.querySelector('nav ul');
+
+        menuToggle.addEventListener('click', function () {
+            nav.classList.toggle('slide');
+        })
+    </script>
+</body>
+
+</html>
