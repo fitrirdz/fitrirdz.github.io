@@ -21,7 +21,7 @@ body {
 }
 
 body {
-  background-color: var(--body-color);
+  background-color: var(--primary-color-alt);
   overflow-x: hidden;
 }
 
@@ -157,7 +157,6 @@ nav ul {
 }
 
 .main {
-  background-color: var(--primary-color-alt);
   overflow: hidden;
 }
 
@@ -169,7 +168,11 @@ nav ul {
 
 .container {
   max-width: 1120px;
-  margin: auto;
+  margin: 1.5rem;
+}
+
+.home-container {
+  padding-block: 6rem 8.2rem;
 }
 
 .tagline {
@@ -178,22 +181,20 @@ nav ul {
   justify-content: center;
   width: 65%;
   gap: 1.5rem;
-  padding-block: 6rem 8.2rem;
+  height: 50vh;
 }
 
 .title {
-  font-size: 4.5em;
-  max-width: 90%;
+  font-size: 5.5vw;
 }
 
 .description {
-  font-size: 1.5em;
-  max-width: 60%;
+  font-size: 3vw;
 }
 
 .character {
-  height: 35%;
-  width: 35%;
+  width: 40vw;
+  aspect-ratio: 1/1;
   border-radius: 50%;
   background-color: var(--primary-color);
   display: inline-block;
@@ -203,33 +204,45 @@ nav ul {
 }
 
 .character img {
-  /* margin-top: -50px; */
   width: 100%;
 }
 
 .options {
-  display: flex;
+  width: 100%;
+  font-size: 0;
 }
 
-.options button {
-  height: 48px;
-  width: 20%;
+a.button {
+  font-size: 2vw;
+  display: inline-block;
+  padding: 0.35em 1.2em;
+  text-decoration: none;
+  text-align: center;
   background-color: var(--secondary-color);
+  color: var(--title-color);
 }
 
-.options button:first-child {
+a.button:hover {
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+}
+
+.options a.button:first-child {
   border-radius: 56px 0px 0px 56px;
   border-right: 1px solid var(--primary-color-alt);
 }
 
-.options button:last-child {
+.options a.button:last-child {
   border-radius: 0px 56px 56px 0px;
+}
+.rating-container {
+  width: 100%;
 }
 
 .rating {
   /* From https://css.glass */
   background: rgba(255, 255, 255, 0.21);
-  border-radius: 16px;
+  border-radius: 1em;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(3.3px);
   -webkit-backdrop-filter: blur(3.3px);
@@ -242,10 +255,10 @@ nav ul {
 }
 
 .icon {
-  font-size: 2.5em;
+  font-size: 4vw;
 }
 .star {
-  font-size: 1em;
+  font-size: 2vw;
   letter-spacing: 0;
 }
 .review-counter {
@@ -257,6 +270,22 @@ nav ul {
 @media screen and (max-width: 768px) {
   nav ul {
     width: 50%;
+  }
+
+  .tagline {
+    flex: 0 0 auto;
+    width: 100%;
+    text-align: center;
+  }
+
+  .character {
+    display: none;
+    width: 0%;
+  }
+
+  .rating-container {
+    display: flex;
+    justify-content: center;
   }
 }
 
@@ -289,7 +318,58 @@ nav ul {
     transform: translateX(0%);
   }
 
+  .container {
+    margin-inline: 1rem;
+  }
+
   .menu-toggle {
     display: flex;
+  }
+
+  a.button {
+    display: block;
+    margin: 0.4em auto;
+  }
+
+  .options a.button:first-child {
+    border-radius: 0;
+    border: none;
+  }
+
+  .options a.button:last-child {
+    border-radius: 0;
+  }
+}
+
+/* large devices */
+@media screen and (min-width: 1150px) {
+  .container {
+    margin: auto;
+  }
+
+  .home-container {
+    padding-block: 10rem 15.3rem;
+  }
+
+  .tagline {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .character {
+    height: 35%;
+    width: 35%;
+  }
+
+  .title {
+    font-size: 4.5vw;
+  }
+
+  .description {
+    font-size: 2vw;
+  }
+
+  a.button {
+    font-size: 1.3vw;
   }
 }
