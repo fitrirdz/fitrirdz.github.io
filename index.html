@@ -91,9 +91,7 @@
             var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            // Output the result in an element with id="demo"
-            document.getElementById("timer").innerHTML = days + "d " + hours + "h "
-                + minutes + "m " + seconds + "s ";
+
 
             // If the count down is over, write some text 
             if (distance < 0) {
@@ -114,6 +112,10 @@
                 document.getElementById("firework1").className = 'firework';
                 document.getElementById("firework2").className = 'firework';
                 document.getElementById("firework3").className = 'firework';
+            } else {
+                // Output the result in an element with id="demo"
+                document.getElementById("timer").innerHTML = days + "d " + hours + "h "
+                    + minutes + "m " + seconds + "s ";
             }
         }, 1000);
     </script>
