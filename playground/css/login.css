@@ -185,6 +185,10 @@ html {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+
+.mountain {
+    filter: drop-shadow(10px -5px 20px rgba(42, 0, 63, 0.5));
+}
   
   @keyframes animStar {
     from {

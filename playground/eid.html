@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap" rel="stylesheet">
     <title>Eid Mubarak</title>
     <link rel="stylesheet" href="css/login.css">
+    <link rel="icon" href="../assets/moon.ico" type="image/x-icon">
 </head>
 
 <body>
@@ -22,7 +23,7 @@
                 <div class="layer" data-depth-x="-0.15" data-depth-y="0.25">
                     <div class="moon"></div>
                 </div>
-                <div class="layer" data-depth-x="0.15"><img src="images/mountain.png" alt="">
+                <div class="layer" data-depth-x="0.15"><img class="mountain" src="images/mountain.png" alt="">
 
                 </div>
             </div>
@@ -45,7 +46,15 @@
 
     <script>
         let scene = document.getElementById("scene");
-        let parallax = new Parallax(scene)
+        let parallax = new Parallax(scene);
+
+        const input = document.getElementById('name');
+        input.addEventListener('keyup', function (event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                document.getElementById('btn').click();
+            }
+        });
     </script>
     <script src="js/parallax.js"></script>
 </body>

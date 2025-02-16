@@ -1,5 +1,5 @@
 const cardWidth = 500,
-  degIncrement = 5,
+  degIncrement = 3,
   card = document.getElementById("card");
 
 const getRotateDeg = (input) => {
@@ -31,7 +31,7 @@ const onMouseLeave = () => {
 };
 
 const getRandomId = () => {
-  fetch("../json/messages.json")
+  fetch("json/messages.json")
     .then((response) => response.json())
     .then((json) => {
       const id = Math.floor(Math.random() * json?.length);
@@ -45,6 +45,8 @@ const getRandomId = () => {
 
 const openMessage = () => {
   const name = document.getElementById("name");
-  sessionStorage.setItem("nama", name?.value);
-  window.location.href = "/playground/message.html";
+  if(name?.value){
+    sessionStorage.setItem("nama", name?.value);
+    window.location.href = "/playground/message.html";
+  }
 };

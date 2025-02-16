@@ -13,7 +13,6 @@ body {
   perspective: 1000px;
   margin: 0;
   padding: 0;
-  /* font-family: "Dancing Script"; */
   background: linear-gradient(0deg, rgb(135, 121, 156), rgb(88, 59, 116), rgb(51, 34, 68), rgb(20, 5, 34));
   color: #f9f9f9;
 }
@@ -22,7 +21,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* align-items: center; */
     padding: 20px;
     width: 750px;
     height: 480px;
@@ -70,7 +68,6 @@ button:active {
     .card {
         margin: auto;
         width: 80%;
-        /* height: 320px; */
         padding: 15px;
         overflow: auto;
     }
