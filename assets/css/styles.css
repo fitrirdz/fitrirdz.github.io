@@ -7,8 +7,8 @@
 
   /* Colors */
 
-  --hue: 30;
-  --first-color: hsl(var(--hue), 88%, 50%);
+  --hue: 210;
+  --first-color: hsl(var(--hue), 60%, 50%);
   --first-color-alt: hsl(var(--hue), 82%, 56%);
   --first-color-light: hsl(var(--hue), 40%, 80%);
   --title-color: hsl(var(--hue), 24%, 16%);
@@ -585,6 +585,7 @@ body.dark-theme {
   position: relative;
   overflow: hidden;
   margin-bottom: 1rem;
+  box-shadow: var(--shadow-color) 0px 2px 8px 0px;
 }
 
 .work__img {
