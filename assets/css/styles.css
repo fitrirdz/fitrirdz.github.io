@@ -7,8 +7,8 @@
 
   /* Colors */
 
-  --hue: 210;
-  --first-color: hsl(var(--hue), 60%, 50%);
+  --hue: 160;
+  --first-color: hsl(var(--hue), 35%, 35%);
   --first-color-alt: hsl(var(--hue), 82%, 56%);
   --first-color-light: hsl(var(--hue), 40%, 80%);
   --title-color: hsl(var(--hue), 24%, 16%);
@@ -232,7 +232,7 @@ body.dark-theme {
 }
 
 .perfil__img {
-  width: 150px;
+  width: 180px;
 }
 
 .main {
@@ -984,7 +984,7 @@ body.dark-theme {
   }
 
   .perfil__img {
-    width: 300px;
+    width: 320px;
   }
 
   .home__rectangle {
