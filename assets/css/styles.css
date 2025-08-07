@@ -7,17 +7,17 @@
 
   /* Colors */
 
-  --hue: 160;
-  --first-color: hsl(var(--hue), 35%, 35%);
-  --first-color-alt: hsl(var(--hue), 82%, 56%);
-  --first-color-light: hsl(var(--hue), 40%, 80%);
-  --title-color: hsl(var(--hue), 24%, 16%);
-  --text-color: hsl(var(--hue), 8%, 45%);
-  --text-color-light: hsl(var(--hue), 8%, 45%);
+  --hue: 106;
+  --first-color: hsl(var(--hue), 29%, 49%);
+  --first-color-alt: hsl(var(--hue), 29%, 40%);
+  --first-color-light: hsl(var(--hue), 29%, 65%);
+  --title-color: hsl(var(--hue), 29%, 20%);
+  --text-color: hsl(var(--hue), 29%, 35%);
+  --text-color-light: hsl(var(--hue), 29%, 65%);
   --white-color: hsl(0, 0%, 100%);
   --body-color: hsl(0, 0%, 100%);
   --container-color: hsl(0, 0%, 100%);
-  --shadow-color: hsla(var(--hue), 90%, 30%, 0.1);
+  --shadow-color: hsla(var(--hue), 29%, 30%, 0.1);
 
   /* Font and typography */
   --body-font: 'Syne', sans-serif;
