@@ -589,7 +589,7 @@ body.dark-theme {
 }
 
 .work__img {
-  filter: grayscale(1);
+  /* filter: grayscale(1); */
   transition: filter 0.5s, transform 0.5s;
 }
 
